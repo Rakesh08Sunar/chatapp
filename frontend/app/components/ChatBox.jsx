@@ -4,7 +4,7 @@ import { useEffect, useState, useRef } from "react";
 import { io } from "socket.io-client";
 import api from "../lib/api";
 
-const socket = io("http://localhost:4000");
+const socket = io("https://chatapp-8i8d.onrender.com");
 
 export default function ChatBox({ friend, currentUser }) {
     const [messages, setMessages] = useState([]);

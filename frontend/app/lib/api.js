@@ -13,7 +13,7 @@
 import axios from "axios";
 
 const api = axios.create({
-  baseURL: "http://localhost:4000",
+  baseURL: "https://chatapp-8i8d.onrender.com",
 });
 
 api.interceptors.request.use((config) => {
