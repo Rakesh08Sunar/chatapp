@@ -15,11 +15,11 @@ dotenv.config();
     TypeOrmModule.forRoot({
       type: 'mysql',
       url: process.env.AIVEN_URI,
-      // host: "mysql987-db-chatapp987.j.aivencloud.com",
+      host: process.env.DB_HOST,
       port: 15449,
-      username: "avnadmin",
-      password: "AVNS_VFLm9EdH4oBBaJdZsFY",
-      database: "defaultdb",
+      username: process.env.DB_USER,
+      password: process.env.DB_PASS,
+      database: process.env.DB_NAME,
       autoLoadEntities: true,
       // entities: [User],
       synchronize: true, // ❗ false in production
