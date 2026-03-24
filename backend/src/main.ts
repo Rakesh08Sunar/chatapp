@@ -16,7 +16,7 @@ async function bootstrap() {
   const app = await NestFactory.create(AppModule);
 
   app.enableCors({
-    origin: ['http://localhost:3002','https://chatapp-livid-theta.vercel.app/'],
+    origin: '*', // Allow all origins (you can specify specific origins if needed)
   });
 
   app.useGlobalPipes(new ValidationPipe());
